@@ -230,6 +230,15 @@ main > section {
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
 }
+
+footer {
+  max-width: 1440px;
+  text-align: center;
+  margin: 70px auto;
+  padding: 22px 30px;
+  border-radius: 10px;
+}
+
 /* Responsive Media query */
 
 /* Small size Device */
