@@ -1,219 +1,551 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Architects</title>
-    <link rel="stylesheet" href="./styles/architects.css" />
+    <title>SHT</title>
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles/architects.css" />
   </head>
   <body class="work-sans-font">
-    <header class="bg-light">
-      <nav class="navbar display-flex">
-        <h3 class="brand">S<span>H</span>T</h3>
-        <ul class="nav-links display-flex">
-          <li class="nav-item">
-            <a href="" class="nav-link text-gray">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-gray">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-gray">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="" class="nav-link text-gray"
-              ><button class="btn-primary">Login</button></a
-            >
-          </li>
-        </ul>
-      </nav>
-      <div class="banner">
-        <div class="banner-content">
-          <h1 class="banner-title">Brand New Group of Architects</h1>
-          <p class="banner-description">
-            We transform visions into reality through innovative design,
-            sustainable solutions, and meticulous craftsmanship. Our
-            architecture harmonizes aesthetics with functionality, creating
-            spaces that inspire, endure, and elevate human experience.
-          </p>
-          <button class="btn-primary">Explore More</button>
-        </div>
-        <img src="images/banner.png" alt="Banner" class="banner-image" />
-      </div>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="brand-logo">
+          <span class="brand-text">S<span>H</span>T</span>
+          <span class="brand-tagline">architects</span>
+        </a>
 
-    <main>
-      <!-- teams section start -->
-      <section class="teams display-flex">
-        <div class="team-image-container">
-          <img
-            src="images/team1.png"
-            alt="Two architects discussing about design"
-          />
-          <img src="images/team2.png" alt="Company advertising photo" />
-          <img src="images/team3.png" alt="Manager visit client works" />
-          <img src="images/team4.png" alt="Deal confirm two architects" />
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active">
+                <i class="fas fa-home"></i> <span>Home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                <i class="fas fa-users"></i> <span>About</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#features" class="nav-link">
+                <i class="fas fa-star"></i> <span>Features</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#facts" class="nav-link">
+                <i class="fas fa-chart-line"></i> <span>Facts</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#sponsors" class="nav-link">
+                <i class="fas fa-handshake"></i> <span>Sponsors</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">
+                <i class="fas fa-envelope"></i> <span>Contact</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="our-features">
-          <h3 class="section-title">
-            <span id="quick-list" class="text-light-gray">Quick list</span>
-            <span>of Our</span> <span class="text-primary"> Features</span>
-          </h3>
-          <p class="feature-description text-light-gray">
-            Discover what sets us apart. We combine innovative design with
-            practical execution, delivering unique architectural solutions on
-            time and within budget.From sustainable materials to seamless
-            project management, our core features ensure your vision is realized
-            with precision, creativity, and exceptional value.
-          </p>
-          <button class="btn-primary">Explore More</button>
-        </div>
-      </section>
 
-      <!-- features will enjoy -->
-      <section class="features display-flex">
-        <div>
-          <h3 id="feature-section-title" class="section-title">
-            Features You will <br />love & enjoy
-          </h3>
-          <p class="text-light-gray">
-            Experience architecture like never before. Our feature-rich platform
-            combines cutting-edge technology with intuitive design, making
-            complex architectural processes accessible and enjoyable for both
-            professionals and clients.
-          </p>
-
-          <!-- Feature card container -->
-          <div class="feature-card">
-            <h4 class="feature-title">Desktop & Mobile Version</h4>
-            <p class="text-light-gray">
-              Access your projects anywhere, anytime. Our fully responsive
-              platform works seamlessly across all devices, ensuring you can
-              review designs, communicate with your team, and manage projects on
-              the go.
-            </p>
+        <div class="nav-actions">
+          <button class="search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="auth-buttons">
+            <!-- Login/Logout will be dynamically controlled by JS -->
+            <button class="auth-btn" id="authBtn">
+              <i class="fas fa-sign-in-alt"></i>
+              <span id="authText">Login</span>
+            </button>
           </div>
-          <div class="feature-card">
-            <h4 class="feature-title">Drag & Drop Builder</h4>
-            <p class="text-light-gray">
-              Create and modify designs effortlessly with our intuitive
-              drag-and-drop interface. No technical expertise required—bring
-              your architectural visions to life with simple, visual editing
-              tools.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h4 class="feature-title">Awesome Modern Design</h4>
-            <p class="text-light-gray">
-              Experience sleek, contemporary interfaces that inspire creativity.
-              Our modern design aesthetic provides a clean, distraction-free
-              environment focused on what matters most—your architectural
-              projects.
-            </p>
-          </div>
-          <div class="feature-card">
-            <h4 class="feature-title">Super Easy to Edit</h4>
-            <p class="text-light-gray">
-              Make changes in real-time with our user-friendly editing tools.
-              Whether adjusting layouts, materials, or dimensions, our platform
-              makes modifications simple and immediate, saving you time and
-              effort.
-            </p>
-          </div>
-        </div>
-        <div class="feature-architect">
-          <img src="images/architect.png" alt="Architect" />
-          <button id="experience-badge" class="btn-primary">
-            <span id="experience-year">10+ Years</span>
-            <br />
-            <span>Experience</span>
+          <button
+            class="dark-mode-toggle"
+            id="darkModeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
           </button>
         </div>
-      </section>
+      </div>
+    </nav>
 
-      <!-- some facts -->
-      <section class="some-facts">
-        <h3 class="section-title">Some Facts</h3>
-        <p class="text-light-gray fact-description">
-          Our commitment to excellence is reflected in the numbers. With over a
-          decade of experience, we have built a legacy of successful projects
-          and satisfied clients across residential, commercial, and
-          institutional sectors.
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Brand New Group of <span>Architects</span></h1>
+        <p class="hero-description">
+          We transform visions into reality through innovative design,
+          sustainable solutions, and meticulous craftsmanship. Our architecture
+          harmonizes aesthetics with functionality, creating spaces that
+          inspire, endure, and elevate human experience.
         </p>
-        <div class="facts-container">
-          <div class="fact-card display-flex">
-            <div>
-              <img
-                src="images/icons/ribon.png"
-                alt="ribon-icon"
-                class="fact-icon"
-              />
-              <h4 class="fact-number">54</h4>
-              <h5 class="fact-name">Award Winning</h5>
-            </div>
-          </div>
-
-          <div class="fact-card display-flex">
-            <div>
-              <img
-                src="images/icons/projects.png"
-                alt="project-icon"
-                class="fact-icon"
-              />
-              <h4 class="fact-number">1454</h4>
-              <h5 class="fact-name">Project Finished</h5>
-            </div>
-          </div>
-
-          <div class="fact-card display-flex">
-            <div>
-              <img
-                src="images/icons/customers.png"
-                alt="customers-icon"
-                class="fact-icon"
-              />
-              <h4 class="fact-number">590</h4>
-              <h5 class="fact-name">Client Worked</h5>
-            </div>
-          </div>
-
-          <div class="fact-card display-flex">
-            <div>
-              <img
-                src="images/icons/email.png"
-                alt="email-icon"
-                class="fact-icon"
-              />
-              <h4 class="fact-number">22578</h4>
-              <h5 class="fact-name">Email Send</h5>
-            </div>
-          </div>
+        <div class="hero-buttons">
+          <button class="btn-primary">
+            <i class="fas fa-calendar-check"></i> Explore More
+          </button>
+          <button class="btn-outline">
+            <i class="fas fa-play"></i> View Showreel
+          </button>
         </div>
-      </section>
+      </div>
+      <div class="hero-image-wrapper">
+        <img
+          src="images/banner.png"
+          alt="Modern Architecture"
+          class="hero-image"
+        />
+        <div class="hero-badge">
+          <span class="badge-number">25+</span>
+          <span class="badge-text">Years Excellence</span>
+        </div>
+      </div>
+    </section>
 
-      <!-- Sponsors section -->
-      <section class="our-sponsors">
-        <div class="sponsor-info">
-          <h3 class="section-title">Our Sponsors</h3>
-          <p class="text-light-gray sponsor-description">
-            Proudly partnered with industry leaders who share our vision for
-            innovative and sustainable architectural design.
+    <main>
+      <!-- About Section -->
+      <section id="about" class="teams-section">
+        <div class="section-header">
+          <span class="section-subtitle">Who We Are</span>
+          <h2 class="section-title">
+            Meet Our <span class="text-primary">Architects</span>
+          </h2>
+          <p class="section-description">
+            Award-winning team dedicated to creating architectural masterpieces
           </p>
         </div>
-        <div class="sponsor-companies">
-          <img src="images/sponsors/spotify.png" alt="Spotify" />
-          <img src="images/sponsors/google.png" alt="Google" />
-          <img src="images/sponsors/amazon.png" alt="Amazon" />
-          <img src="images/sponsors/telerama.png" alt="Telegram" />
-          <img src="images/sponsors/figma.png" alt="Figma" />
+
+        <div class="teams-container">
+          <div class="team-images">
+            <div class="image-grid">
+              <img
+                src="images/team1.png"
+                alt="Architect Team"
+                class="grid-img"
+              />
+              <img
+                src="images/team2.png"
+                alt="Architect Team"
+                class="grid-img"
+              />
+              <img
+                src="images/team3.png"
+                alt="Architect Team"
+                class="grid-img"
+              />
+              <img
+                src="images/team4.png"
+                alt="Architect Team"
+                class="grid-img"
+              />
+            </div>
+          </div>
+          <div class="team-content">
+            <h3 class="content-title">
+              <span class="text-light-gray">Quick list</span> of Our
+              <span class="text-primary">Features</span>
+            </h3>
+            <p class="content-text">
+              Discover what sets us apart. We combine innovative design with
+              practical execution, delivering unique architectural solutions on
+              time and within budget. From sustainable materials to seamless
+              project management, our core features ensure your vision is
+              realized with precision, creativity, and exceptional value.
+            </p>
+            <button class="btn-primary">
+              <i class="fas fa-arrow-right"></i> Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features-section">
+        <div class="section-header">
+          <span class="section-subtitle">Why Choose Us</span>
+          <h2 class="section-title">
+            Features You'll <span class="text-primary">Love</span>
+          </h2>
+        </div>
+
+        <div class="features-container">
+          <div class="features-left">
+            <div class="feature-card-3d">
+              <div class="card-content">
+                <div class="card-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h4>Desktop & Mobile</h4>
+                <p>
+                  Access your projects anywhere, anytime. Fully responsive
+                  platform.
+                </p>
+              </div>
+            </div>
+            <div class="feature-card-3d">
+              <div class="card-content">
+                <div class="card-icon">
+                  <i class="fas fa-mouse-pointer"></i>
+                </div>
+                <h4>Drag & Drop Builder</h4>
+                <p>Intuitive interface. No technical expertise required.</p>
+              </div>
+            </div>
+            <div class="feature-card-3d">
+              <div class="card-content">
+                <div class="card-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+                <h4>Awesome Modern Design</h4>
+                <p>Sleek, contemporary interfaces that inspire creativity.</p>
+              </div>
+            </div>
+            <div class="feature-card-3d">
+              <div class="card-content">
+                <div class="card-icon">
+                  <i class="fas fa-edit"></i>
+                </div>
+                <h4>Super Easy to Edit</h4>
+                <p>Real-time editing tools that save time and effort.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="features-right">
+            <img
+              src="images/architect.png"
+              alt="Architect at work"
+              class="features-image"
+            />
+            <div class="experience-badge">
+              <span class="years">10+ Years</span>
+              <span class="exp-text">Experience</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Facts Section -->
+      <section id="facts" class="facts-section">
+        <div class="section-header">
+          <span class="section-subtitle">Our Achievements</span>
+          <h2 class="section-title">
+            Some <span class="text-primary">Facts</span>
+          </h2>
+        </div>
+
+        <div class="facts-grid">
+          <div class="fact-card-3d">
+            <div class="fact-content">
+              <div class="fact-icon">
+                <i class="fas fa-award"></i>
+              </div>
+              <h3 class="fact-number">54</h3>
+              <p class="fact-label">Awards Winning</p>
+            </div>
+          </div>
+          <div class="fact-card-3d">
+            <div class="fact-content">
+              <div class="fact-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3 class="fact-number">1454</h3>
+              <p class="fact-label">Projects Finished</p>
+            </div>
+          </div>
+          <div class="fact-card-3d">
+            <div class="fact-content">
+              <div class="fact-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3 class="fact-number">590</h3>
+              <p class="fact-label">Clients Worked</p>
+            </div>
+          </div>
+          <div class="fact-card-3d">
+            <div class="fact-content">
+              <div class="fact-icon">
+                <i class="fas fa-envelope-open-text"></i>
+              </div>
+              <h3 class="fact-number">22578</h3>
+              <p class="fact-label">Emails Send</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sponsors Section -->
+      <section id="sponsors" class="sponsors-section">
+        <div class="section-header">
+          <span class="section-subtitle">Our Partners</span>
+          <h2 class="section-title">
+            Proudly <span class="text-primary">Sponsored</span> By
+          </h2>
+        </div>
+
+        <div class="sponsors-grid">
+          <img
+            src="images/sponsors/spotify.png"
+            alt="Spotify"
+            class="sponsor-logo"
+          />
+          <img
+            src="images/sponsors/google.png"
+            alt="Google"
+            class="sponsor-logo"
+          />
+          <img
+            src="images/sponsors/amazon.png"
+            alt="Amazon"
+            class="sponsor-logo"
+          />
+          <img
+            src="images/sponsors/telerama.png"
+            alt="Telegram"
+            class="sponsor-logo"
+          />
+          <img
+            src="images/sponsors/figma.png"
+            alt="Figma"
+            class="sponsor-logo"
+          />
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">
+            Contact <span class="text-primary">Us</span>
+          </h2>
+          <p class="section-description">
+            Have a project in mind? We'd love to hear from you.
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <div class="contact-info-3d">
+            <div class="contact-info-content">
+              <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
+              <p>123 Design Street, Creative District, New York, NY 10001</p>
+
+              <h3><i class="fas fa-phone-alt"></i> Call Us</h3>
+              <p>+1 (555) 123-4567</p>
+
+              <h3><i class="fas fa-envelope"></i> Email Us</h3>
+              <p>info@shtarchitects.com</p>
+
+              <h3><i class="fas fa-clock"></i> Working Hours</h3>
+              <p>
+                Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM -
+                4:00 PM
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-form-3d">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="form-group">
+                <input type="text" id="subject" placeholder="Subject" />
+                <i class="fas fa-tag"></i>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+                <i class="fas fa-comment"></i>
+              </div>
+              <button type="submit" class="btn-primary submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-light">
-      <small>
-        All rights reserved copyright@2023 startup landing page design.
-      </small>
+    <!-- Footer -->
+    <footer class="premium-footer">
+      <div class="footer-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <h3>S<span>H</span>T</h3>
+            <p>Creating spaces that inspire generations.</p>
+          </div>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fas fa-chevron-right"></i> About Us</a>
+            </li>
+            <li>
+              <a href="#features"
+                ><i class="fas fa-chevron-right"></i> Features</a
+              >
+            </li>
+            <li>
+              <a href="#facts"
+                ><i class="fas fa-chevron-right"></i> Our Facts</a
+              >
+            </li>
+            <li>
+              <a href="#sponsors"
+                ><i class="fas fa-chevron-right"></i> Sponsors</a
+              >
+            </li>
+            <li>
+              <a href="#contact"
+                ><i class="fas fa-chevron-right"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Residential</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Commercial</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Interior Design</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fas fa-chevron-right"></i> Urban Planning</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chevron-right"></i> Consultation</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get updates on our latest projects</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 SHT Architects. All rights reserved. | Designed with
+          <i class="fas fa-heart" style="color: #c79a4b"></i> for architecture
+        </p>
+      </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Login to Your Account</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="loginUsername"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="form-options">
+            <label> <input type="checkbox" /> Remember me </label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn-primary login-btn">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+          <p class="demo-credentials">
+            Demo: username: demo / password: demo123
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/Js/script.js"></script>
   </body>
 </html>
